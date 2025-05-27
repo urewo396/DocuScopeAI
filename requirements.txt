@@ -3,6 +3,7 @@ uvicorn[standard]
 python-multipart         # for file uploads
 pydantic
 httpx                    # for async HTTP requests if needed
+pandas
 
 # Hugging Face Transformers + Datasets
 transformers

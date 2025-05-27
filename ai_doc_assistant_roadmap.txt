@@ -1,0 +1,88 @@
+
+AI Document Assistant – 10-Week Roadmap 🧠
+
+Week 1 – Setup & Core Skills
+----------------------------
+Mon: Set up Python + FastAPI hello world API
+Tue: Learn routing, query params, file upload (FastAPI docs)
+Wed: Try Hugging Face models (Image-to-Text, Document QA)
+Thu: PDF → text pipeline using Hugging Face + Tesseract OCR
+Fri: Try OpenAI Whisper or audio models (optional)
+Sat: Upload file → Extract text → Print result
+Sun: Chill + review + blog
+
+Week 2 – Frontend Basics (React/Next.js)
+----------------------------------------
+Mon: Create Next.js app w/ Tailwind
+Tue: File upload form → backend
+Wed: Show extracted text in UI
+Thu: Add loading states & layout polish
+Fri: Add routes: /upload, /history
+Sat: Mock "View Uploaded Docs"
+Sun: Share project + writeup
+
+Week 3 – Backend Expansion
+--------------------------
+Mon: Learn Celery + Redis (Docker)
+Tue: Async processing for long tasks
+Wed: Setup PostgreSQL w/ ORM (SQLAlchemy/Tortoise)
+Thu: Save uploads + results to DB
+Fri: Build /history API
+Sat: Secure uploads
+Sun: Polish + bug fixing
+
+Week 4 – Search & Elastic Magic
+-------------------------------
+Mon: Setup Elasticsearch or Postgres full-text search
+Tue: Index extracted text
+Wed: Build frontend search bar
+Thu: Connect frontend ↔ backend
+Fri: UI polish: highlight keywords
+Sat: Add filters (date/type)
+Sun: Share update
+
+Week 5 – Auth + User Dashboard
+------------------------------
+Mon: Add Auth (Clerk/Auth0/Supabase)
+Tue: Restrict upload & history to users
+Wed: User dashboard for docs
+Thu: Add sharing (public/private links)
+Fri: Save preferences
+Sat: UI polish
+Sun: REST day 😎
+
+Week 6 – AI Features
+--------------------
+Mon: Add visual QA (ask doc questions)
+Tue: Add scanned form support
+Wed: Summarization feature
+Thu: Auto-insights (dates, names, entities)
+Fri: Optional: voice input + TTS
+Sat: Results UI polish
+Sun: Test on real docs
+
+Week 7 – Performance + UI Polish
+--------------------------------
+Mon: File upload progress, limit size
+Tue: Mobile friendly design + bug fixes
+Wed: Basic usage analytics
+Thu: Security (rate limit, headers)
+Fri: Docs, empty states, error msgs
+Sat: Test w/ real people
+Sun: Fix stuff they hated
+
+Week 8 – Deploy & Portfolio Polish
+----------------------------------
+Mon: Deploy backend (Railway/Render) + frontend (Vercel)
+Tue: Killer README with screenshots
+Wed: Record demo video (OBS/Loom)
+Thu: Blog post about project
+Fri: Structure repo cleanly
+Sat: Add to LinkedIn + GitHub
+Sun: Submit to HackerNews/ProductHunt
+
+Bonus Ideas
+-----------
+- PDF annotations w/ highlights
+- Slack/Gmail integrations
+- Stripe: Monetize w/ Pro features

@@ -1,0 +1,18 @@
+fastapi
+uvicorn[standard]
+python-multipart         # for file uploads
+pydantic
+httpx                    # for async HTTP requests if needed
+
+# Hugging Face Transformers + Datasets
+transformers
+datasets
+torch                    # required for many HF models
+
+# OCR (for scanned PDFs/images)
+pytesseract              # Python wrapper for Tesseract
+pdf2image                # convert PDFs to images
+pillow                   # image processing
+
+# Optional for extra doc support
+PyMuPDF                  # better PDF parsing than PyPDF2 sometimes

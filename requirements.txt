@@ -4,6 +4,8 @@ python-multipart         # for file uploads
 pydantic
 httpx                    # for async HTTP requests if needed
 pandas
+protobuf
+tiktoken
 
 # Hugging Face Transformers + Datasets
 transformers

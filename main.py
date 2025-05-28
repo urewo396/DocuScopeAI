@@ -16,7 +16,7 @@ summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 #headers for OpenRouter API
 headers = {
-  "Authorization": "Bearer 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",
+  "Authorization": "Bearer <YOUR_API_KEY>",
   "Content-Type": "application/json"
 }
 

@@ -6,6 +6,7 @@ httpx                    # for async HTTP requests if needed
 pandas
 protobuf
 tiktoken
+accelerate
 
 # Hugging Face Transformers + Datasets
 transformers

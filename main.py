@@ -6,6 +6,7 @@ import pytesseract
 from transformers import pipeline
 from pdf2image import convert_from_path
 import tempfile
+from utils import clean_text
 
 app = FastAPI()
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -17,7 +18,7 @@ async def image_summary(file: UploadFile = File(...)):
     if(filename.endswith('png') or filename.endswith('jpg') or filename.endswith('jpeg')):
         image_bytes = await file.read()
         image = Image.open(io.BytesIO(image_bytes))
-        imageContent = pytesseract.image_to_string(image)
+        imageContent = clean_text(pytesseract.image_to_string(image))
         summary = summarizer(imageContent, max_length=150, min_length=40, do_sample=False)
         summary = summary[0]['summary_text']
         return{"summary": summary}
@@ -29,7 +30,18 @@ async def image_summary(file: UploadFile = File(...)):
         pagesContent = ""
         for page in pages:
             pagesContent += pytesseract.image_to_string(page)
+        
+        pagesContent = clean_text(pagesContent)
         summary = summarizer(pagesContent, max_length=150, min_length=40, do_sample=False)
-        return {"summary": summary[0]['summary_text']}
+        summary = summary[0]['summary_text']
+        return {"summary": summary}
     else:
         return {"error": "Unsupported file type"}
+    
+
+@app.post("/api/raw-text-summary")
+async def raw_summary(text: str):
+    summary = summarizer(text, max_length=150, min_length=40, do_sample=False)
+    summary = summary[0]['summary_text']
+    summary = clean_text(summary)
+    return {"summary": summary}
